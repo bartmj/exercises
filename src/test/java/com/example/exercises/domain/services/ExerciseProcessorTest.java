@@ -25,19 +25,23 @@ class ExerciseProcessorTest {
     @Test
     @DisplayName("")
     public void saveExercise_shouldReturn_IdOf1L() throws Exception {
-        HashSet<String> muscleGroups = new HashSet<>();
-        muscleGroups.add("fdsdf");
-        muscleGroups.add("fdsdf");
-        var exercise = Exercise.builder()
-                .name("fsdfds")
-                .engName("fdsfsdf")
-                .muscleGroup(muscleGroups)
-                .build();
+        var exercise = createValidExercise();
 
         when(exerciseRepository.saveExercise(exercise)).thenReturn(1L);
 
         var aLong = exerciseService.saveExercise(exercise);
         assertEquals(aLong, 1L);
+    }
+
+    public Exercise createValidExercise() {
+        HashSet<String> muscleGroups = new HashSet<>();
+        muscleGroups.add("czworogłowy uda");
+        return Exercise.builder()
+                .name("Przysiad ze sztangą")
+                .engName("Squat with a barbell")
+                .muscleGroup(muscleGroups)
+                .build();
+
     }
 
 }
