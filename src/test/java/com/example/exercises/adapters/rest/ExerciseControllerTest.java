@@ -22,22 +22,51 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 @AutoConfigureMockMvc
 class ExerciseControllerTest {
 
-
+    public static final String EXERCISES_ADD = "/exercises/add";
     @Autowired
     private ObjectMapper objectMapper;
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    void whenInputIsValid_thenReturnsStatus400() throws Exception {
-        ExerciseDto exerciseDto = new ExerciseDto("","",new HashSet<>());
+    void whenInputIsInvalid_thenReturnsStatus400() throws Exception {
+        ExerciseDto exerciseDto = ExerciseDto.builder().build();
         String body = objectMapper.writeValueAsString(exerciseDto);
 
-        var result = mockMvc.perform(MockMvcRequestBuilders.post("/exercises")
+        var result = mockMvc.perform(MockMvcRequestBuilders.post(EXERCISES_ADD)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().is(400))
                 .andReturn();
     }
 
+    @Test
+    void whenInputIsValid_thenReturnsStatus200() throws Exception {
+        HashSet<String> muscleGroups = new HashSet<>();
+        HashSet<String> supportMuscleGroups = new HashSet<>();
+
+        muscleGroups.add("czworogłowy uda");
+        supportMuscleGroups.add("dwugłowy uda");
+        supportMuscleGroups.add("pośladkowy");
+
+        ExerciseDto exerciseDto = ExerciseDto
+                .builder()
+                .name("Przysiad ze sztangą")
+                .engName("Squat with a Barbell")
+                .muscleGroup(muscleGroups)
+                .build();
+
+        String body = objectMapper.writeValueAsString(exerciseDto);
+
+        var result = mockMvc.perform(MockMvcRequestBuilders.post(EXERCISES_ADD)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(body))
+                .andDo(print())
+                .andExpect(MockMvcResultMatchers.status().is(200))
+                .andReturn();
+    }
+
 }
+
+
+

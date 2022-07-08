@@ -1,16 +1,23 @@
 package com.example.exercises.domain.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import java.util.HashSet;
+import java.util.Set;
 
+@Setter
+@Getter
 public class Exercise {
 
-    @NotBlank
-    private String name;
-    @NotBlank
-    private String engName;
-    @NotEmpty
-    private HashSet<String> muscleGroup;
+    String name;
+    String engName;
+    Set<String> muscleGroup;
+//    HashSet<String> supportMuscleGroup;
+
+    public Exercise(String name, String engName, Set<String> muscleGroup) {
+        this.name = name;
+        this.engName = engName;
+        this.muscleGroup = muscleGroup;
+    }
 }
