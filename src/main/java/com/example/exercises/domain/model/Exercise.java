@@ -1,6 +1,7 @@
 package com.example.exercises.domain.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Setter
 @Getter
+@Builder
 public class Exercise {
 
     String name;
