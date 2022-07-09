@@ -18,14 +18,15 @@ public class ExerciseDto {
         @NotBlank
         String engName;
         @NotEmpty
-        Set<String> muscleGroup;
-//        @NotEmpty
-//        HashSet<String> supportMuscleGroup;
+        Set<String> mainMuscleGroup;
+        @NotEmpty
+        Set<String> supportMuscleGroup;
 
-
-        public ExerciseDto(String name, String engName, Set<String> muscleGroup) {
+        public ExerciseDto(String name, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
                 this.name = name;
                 this.engName = engName;
-                this.muscleGroup = muscleGroup;
+                this.mainMuscleGroup = mainMuscleGroup;
+                this.supportMuscleGroup = supportMuscleGroup;
         }
+
 }

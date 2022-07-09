@@ -22,6 +22,7 @@ public class ExerciseEntity {
     private String engName;
     @ElementCollection
     private Set<String> mainMuscleGroup = new HashSet<>();
-//    @ElementCollection
-//    private Set<String> supportMuscleGroup = new HashSet<>();
+    @ElementCollection
+    private Set<String> supportMuscleGroup = new HashSet<>();
+
 }

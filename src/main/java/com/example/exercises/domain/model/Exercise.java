@@ -14,12 +14,13 @@ public class Exercise {
 
     String name;
     String engName;
-    Set<String> muscleGroup;
-//    HashSet<String> supportMuscleGroup;
+    Set<String> mainMuscleGroup;
+    Set<String> supportMuscleGroup;
 
-    public Exercise(String name, String engName, Set<String> muscleGroup) {
+    public Exercise(String name, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
         this.name = name;
         this.engName = engName;
-        this.muscleGroup = muscleGroup;
+        this.mainMuscleGroup = mainMuscleGroup;
+        this.supportMuscleGroup = supportMuscleGroup;
     }
 }
