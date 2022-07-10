@@ -12,6 +12,13 @@ import java.util.List;
 
 public class ExerciseTestTools {
 
+    public static List<ExerciseDto> createExerciseDtoList() {
+        List<ExerciseDto> exercises = new ArrayList<>();
+        var exerciseDto = createValidExerciseDto();
+        exercises.add(exerciseDto);
+        return exercises;
+    }
+
     public static List<Exercise> createExerciseList() {
         List<Exercise> exerciseEntities = new ArrayList<>();
         var validExercise = createValidExercise();
@@ -47,7 +54,7 @@ public class ExerciseTestTools {
         return ExerciseDto
                 .builder()
                 .name("Przysiad ze sztangą")
-                .engName("Squat with a Barbell")
+                .engName("Squat with a barbell")
                 .mainMuscleGroup(new HashSet<>(Arrays.asList("czworogłowy uda")))
                 .supportMuscleGroup(new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))
                 .build();

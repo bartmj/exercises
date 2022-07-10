@@ -31,7 +31,7 @@ public class ExerciseController {
                 .body(aLong);
     }
 
-    @GetMapping
+    @GetMapping(produces={"application/json; charset=UTF-8"})
     public ResponseEntity<List<ExerciseDto>> getAllExercises() {
         var exercises = questService.getAll();
         var exerciseDtos = exerciseRestMapper.toDto(exercises);
