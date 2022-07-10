@@ -39,5 +39,17 @@ public class ExerciseController {
                 .status(HttpStatus.OK)
                 .body(exerciseDtos);
     }
+//
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Long> findById(@PathVariable Long id) {
+//        if (repository.existsById(id)) {
+//            repository.findById(id);
+//            return ResponseEntity.ok(id);
+//        } else {
+//            return ResponseEntity
+//                    .status(HttpStatus.NOT_FOUND)
+//                    .body(id);
+//        }
+//    }
 
 }

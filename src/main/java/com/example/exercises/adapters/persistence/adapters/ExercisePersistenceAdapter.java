@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -27,6 +28,12 @@ public class ExercisePersistenceAdapter implements ExerciseRepository {
     public List<Exercise> getAll() {
         var exerciseEntities = jpaExerciseRepository.findAll();
         return mapper.toDomain(exerciseEntities);
+    }
+
+    @Override
+    public Optional<Exercise> findById(Long id) {
+        var exerciseEntityOptional = jpaExerciseRepository.findById(id);
+        return exerciseEntityOptional.map(mapper::toDomain);
     }
 
 }
