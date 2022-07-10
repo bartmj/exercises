@@ -22,7 +22,6 @@ public class ExerciseController {
     private final ExerciseProcessor service;
     private final ExerciseRestMapper exerciseRestMapper;
 
-
     @PostMapping("/add")
     public ResponseEntity<Long> sendExercise(@Valid @RequestBody ExerciseDto exerciseDto) {
         var exercise = exerciseRestMapper.toDomain(exerciseDto);
@@ -41,7 +40,7 @@ public class ExerciseController {
                 .body(exerciseDtos);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}", produces = {"application/json; charset=UTF-8"})
     public ResponseEntity<ExerciseDto> findById(@PathVariable Long id) {
         var exercise = service.getById(id);
         var exerciseDto = exerciseRestMapper.toDto(exercise);
