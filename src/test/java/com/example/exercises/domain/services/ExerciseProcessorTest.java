@@ -1,9 +1,7 @@
 package com.example.exercises.domain.services;
 
-import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.ports.ExerciseRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -12,7 +10,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;

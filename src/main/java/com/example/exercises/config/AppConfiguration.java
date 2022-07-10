@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfiguration {
 
-    @Bean(name = "questService")
+    @Bean(name = "exerciseService")
     public ExerciseProcessor getExerciseProcessor(ExerciseRepository exerciseRepository){
         return new ExerciseProcessor(exerciseRepository);
     }

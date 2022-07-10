@@ -9,4 +9,5 @@ public interface ExerciseRepository {
     Long saveExercise(Exercise exercise);
 
     List<Exercise> getAll();
+
 }

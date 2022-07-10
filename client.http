@@ -1,0 +1,18 @@
+POST http://localhost:8080/exercises/add
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "abc",
+  "engName": "abc",
+  "mainMuscleGroup": [
+    "abc"
+  ],
+  "supportMuscleGroup": [
+    "abc",
+    "abc"
+  ]
+}
+
+###
+GET http://localhost:8080/exercises

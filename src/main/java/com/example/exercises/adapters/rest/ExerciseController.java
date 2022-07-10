@@ -18,14 +18,14 @@ import java.util.List;
 @RequestMapping("/exercises")
 public class ExerciseController {
 
-    private final ExerciseProcessor questService;
+    private final ExerciseProcessor service;
     private final ExerciseRestMapper exerciseRestMapper;
 
 
     @PostMapping("/add")
     public ResponseEntity<Long> sendExercise(@Valid @RequestBody ExerciseDto exerciseDto) {
         var exercise = exerciseRestMapper.toDomain(exerciseDto);
-        var aLong = questService.saveExercise(exercise);
+        var aLong = service.saveExercise(exercise);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(aLong);
@@ -33,7 +33,7 @@ public class ExerciseController {
 
     @GetMapping(produces={"application/json; charset=UTF-8"})
     public ResponseEntity<List<ExerciseDto>> getAllExercises() {
-        var exercises = questService.getAll();
+        var exercises = service.getAll();
         var exerciseDtos = exerciseRestMapper.toDto(exercises);
         return ResponseEntity
                 .status(HttpStatus.OK)

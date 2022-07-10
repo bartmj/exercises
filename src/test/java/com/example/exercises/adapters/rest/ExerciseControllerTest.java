@@ -42,7 +42,7 @@ class ExerciseControllerTest {
     @Autowired
     private MockMvc mockMvc;
     @MockBean
-    private ExerciseProcessor questService;
+    private ExerciseProcessor exerciseService;
     @MockBean
     private ExerciseRestMapper mapper;
 
@@ -84,7 +84,7 @@ class ExerciseControllerTest {
 
         var exerciseList = ExerciseTestTools.createExerciseList();
 
-        Mockito.when(questService.getAll()).thenReturn(exerciseList);
+        Mockito.when(exerciseService.getAll()).thenReturn(exerciseList);
         Mockito.when(mapper.toDto(exerciseList)).thenReturn(ExerciseTestTools.createExerciseDtoList());
 
         var mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(EXERCISES_GET)
