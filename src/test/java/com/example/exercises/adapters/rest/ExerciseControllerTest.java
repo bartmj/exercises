@@ -2,20 +2,15 @@ package com.example.exercises.adapters.rest;
 
 import com.example.exercises.adapters.rest.dtos.ExerciseDto;
 import com.example.exercises.adapters.rest.mappers.ExerciseRestMapper;
-import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.services.ExerciseProcessor;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import lombok.Setter;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;

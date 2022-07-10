@@ -1,7 +1,5 @@
 package com.example.exercises.integration;
 
-import com.example.exercises.adapters.persistence.entities.ExerciseEntity;
-import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.ports.ExerciseRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,13 +13,15 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PostExerciseUseCaseIntegrationTest {
+public class PostExerciseUseCaseIT {
 
     @Autowired
     private MockMvc mockMvc;
@@ -29,9 +29,7 @@ public class PostExerciseUseCaseIntegrationTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Autowired
-    private ExerciseRepository repository;
-
+    @Transactional
     @Test
     void postExercise_returns_statusCode201() throws Exception {
         var validExerciseDto = ExerciseTestTools.createValidExerciseDto();
@@ -41,7 +39,6 @@ public class PostExerciseUseCaseIntegrationTest {
                 .content(objectMapper.writeValueAsString(validExerciseDto)))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().is(201));
-
     }
 
 }
