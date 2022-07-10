@@ -8,4 +8,6 @@ public interface ExerciseService {
     Long saveExercise(Exercise exercise);
 
     List<Exercise> getAll();
+
+    Exercise getById(Long id);
 }

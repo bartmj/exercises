@@ -2,6 +2,7 @@ package com.example.exercises.adapters.rest;
 
 import com.example.exercises.adapters.rest.dtos.ExerciseDto;
 import com.example.exercises.adapters.rest.mappers.ExerciseRestMapper;
+import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.services.ExerciseProcessor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -31,7 +32,7 @@ public class ExerciseController {
                 .body(aLong);
     }
 
-    @GetMapping(produces={"application/json; charset=UTF-8"})
+    @GetMapping(produces = {"application/json; charset=UTF-8"})
     public ResponseEntity<List<ExerciseDto>> getAllExercises() {
         var exercises = service.getAll();
         var exerciseDtos = exerciseRestMapper.toDto(exercises);
@@ -39,17 +40,14 @@ public class ExerciseController {
                 .status(HttpStatus.OK)
                 .body(exerciseDtos);
     }
-//
-//    @GetMapping("/{id}")
-//    public ResponseEntity<Long> findById(@PathVariable Long id) {
-//        if (repository.existsById(id)) {
-//            repository.findById(id);
-//            return ResponseEntity.ok(id);
-//        } else {
-//            return ResponseEntity
-//                    .status(HttpStatus.NOT_FOUND)
-//                    .body(id);
-//        }
-//    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ExerciseDto> findById(@PathVariable Long id) {
+        var exercise = service.getById(id);
+        var exerciseDto = exerciseRestMapper.toDto(exercise);
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(exerciseDto);
+    }
 
 }

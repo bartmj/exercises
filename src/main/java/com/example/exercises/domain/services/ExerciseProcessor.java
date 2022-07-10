@@ -1,6 +1,7 @@
 package com.example.exercises.domain.services;
 
 import com.example.exercises.adapters.rest.dtos.ExerciseDto;
+import com.example.exercises.domain.exceptions.ExerciseNotFoundException;
 import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.ports.ExerciseRepository;
 import com.example.exercises.domain.ports.ExerciseService;
@@ -21,5 +22,11 @@ public class ExerciseProcessor implements ExerciseService {
     @Override
     public List<Exercise> getAll() {
         return exerciseRepository.getAll();
+    }
+
+    @Override
+    public Exercise getById(Long id) {
+        return exerciseRepository.findById(id)
+                .orElseThrow(ExerciseNotFoundException::new);
     }
 }
