@@ -12,6 +12,5 @@ import java.util.UUID;
 
 public class TrainingDay {
 
-    private HashMap<UUID, ExerciseSet> exercises;
-
+    private ArrayList<ExerciseSet> exerciseSets;
 }
