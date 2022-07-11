@@ -2,7 +2,7 @@ package com.example.exercises.adapters.rest;
 
 import com.example.exercises.adapters.rest.dtos.ExerciseDto;
 import com.example.exercises.adapters.rest.mappers.ExerciseRestMapper;
-import com.example.exercises.domain.services.ExerciseProcessor;
+import com.example.exercises.domain.service.ExerciseProcessor;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

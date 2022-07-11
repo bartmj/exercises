@@ -1,4 +1,4 @@
-package com.example.exercises.domain.services;
+package com.example.exercises.domain.service;
 
 import com.example.exercises.domain.ports.ExerciseRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;

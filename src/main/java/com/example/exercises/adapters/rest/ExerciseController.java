@@ -2,8 +2,7 @@ package com.example.exercises.adapters.rest;
 
 import com.example.exercises.adapters.rest.dtos.ExerciseDto;
 import com.example.exercises.adapters.rest.mappers.ExerciseRestMapper;
-import com.example.exercises.domain.model.Exercise;
-import com.example.exercises.domain.services.ExerciseProcessor;
+import com.example.exercises.domain.service.ExerciseProcessor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

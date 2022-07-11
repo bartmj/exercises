@@ -1,6 +1,5 @@
-package com.example.exercises.domain.services;
+package com.example.exercises.domain.service;
 
-import com.example.exercises.adapters.rest.dtos.ExerciseDto;
 import com.example.exercises.domain.exceptions.ExerciseNotFoundException;
 import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.ports.ExerciseRepository;
