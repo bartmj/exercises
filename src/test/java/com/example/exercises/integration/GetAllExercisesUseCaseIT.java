@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -39,11 +40,14 @@ public class GetAllExercisesUseCaseIT {
     @Autowired
     private ExerciseRepository exerciseRepository;
 
+    @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
     @Transactional
     @Test
     void given_DbNotEmpty_getAll_shouldReturnListOfExerciseDtos_withNotEmptyDtos() throws Exception {
-        var validExercise = ExerciseTestTools.createValidExercise();
+        var validExercise = ExerciseTestTools.createValidExercise(); // Przysiad ze sztangą
+
         exerciseRepository.saveExercise(validExercise);
+        var size = exerciseRepository.getAll().size();
 
         var mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/exercises")
                 .contentType(MediaType.APPLICATION_JSON))
@@ -56,10 +60,10 @@ public class GetAllExercisesUseCaseIT {
         });
 
         assertAll(
-                () -> assertEquals(content.get(0).getName(), validExercise.getName()),
-                () -> assertEquals(content.get(0).getEngName(), validExercise.getEngName()),
-                () -> assertEquals(content.get(0).getMainMuscleGroup(), validExercise.getMainMuscleGroup()),
-                () -> assertEquals(content.get(0).getSupportMuscleGroup(), validExercise.getSupportMuscleGroup())
+                () -> assertEquals(content.get(size - 1).getName(), validExercise.getName()),
+                () -> assertEquals(content.get(size - 1).getEngName(), validExercise.getEngName()),
+                () -> assertEquals(content.get(size - 1).getMainMuscleGroup(), validExercise.getMainMuscleGroup()),
+                () -> assertEquals(content.get(size - 1).getSupportMuscleGroup(), validExercise.getSupportMuscleGroup())
         );
     }
 }
