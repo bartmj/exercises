@@ -1,8 +1,8 @@
-package com.example.training.domain.service;
+package com.example.exercises.domain.service;
 
-import com.example.training.domain.model.ExerciseSet;
-import com.example.training.domain.port.ExerciseSetRepository;
-import com.example.training.domain.port.TrainingService;
+import com.example.exercises.domain.model.ExerciseSet;
+import com.example.exercises.domain.port.ExerciseSetRepository;
+import com.example.exercises.domain.port.TrainingService;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

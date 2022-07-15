@@ -1,7 +1,7 @@
-package com.example.training.adapters.persistence.entity;
+package com.example.exercises.adapters.persistence.entity;
 
 import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
-import com.example.training.domain.model.UserEntity;
+import com.example.exercises.domain.model.UserEntity;
 import lombok.*;
 
 import javax.persistence.*;

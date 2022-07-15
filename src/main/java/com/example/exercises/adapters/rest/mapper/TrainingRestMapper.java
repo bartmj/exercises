@@ -1,7 +1,7 @@
-package com.example.training.adapters.rest.mapper;
+package com.example.exercises.adapters.rest.mapper;
 
-import com.example.training.adapters.rest.dto.ExerciseSetDto;
-import com.example.training.domain.model.ExerciseSet;
+import com.example.exercises.adapters.rest.dto.ExerciseSetDto;
+import com.example.exercises.domain.model.ExerciseSet;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

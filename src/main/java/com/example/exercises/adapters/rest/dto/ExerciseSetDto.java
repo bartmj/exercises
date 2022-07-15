@@ -1,4 +1,4 @@
-package com.example.training.adapters.rest.dto;
+package com.example.exercises.adapters.rest.dto;
 
 import lombok.*;
 

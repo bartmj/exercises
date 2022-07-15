@@ -1,9 +1,9 @@
-package com.example.training.adapters.persistence;
+package com.example.exercises.adapters.persistence;
 
-import com.example.training.adapters.persistence.mapper.ExerciseSetPersistenceMapper;
-import com.example.training.adapters.persistence.repository.JpaExerciseSetRepository;
-import com.example.training.domain.model.ExerciseSet;
-import com.example.training.domain.port.ExerciseSetRepository;
+import com.example.exercises.adapters.persistence.mapper.ExerciseSetPersistenceMapper;
+import com.example.exercises.adapters.persistence.repository.JpaExerciseSetRepository;
+import com.example.exercises.domain.model.ExerciseSet;
+import com.example.exercises.domain.port.ExerciseSetRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

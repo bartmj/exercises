@@ -124,10 +124,10 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy107.save(Unknown Source)
-	at com.example.training.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
-	at com.example.training.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
-	at com.example.training.adapters.rest.TrainingController.addSet(TrainingController.java:30)
-	at com.example.training.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
+	at com.example.exercises.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
+	at com.example.exercises.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
+	at com.example.exercises.adapters.rest.TrainingController.addSet(TrainingController.java:30)
+	at com.example.exercises.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -136,7 +136,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at com.example.training.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
+	at com.example.exercises.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -216,10 +216,10 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy107.save(Unknown Source)
-	at com.example.training.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
-	at com.example.training.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
-	at com.example.training.adapters.rest.TrainingController.addSet(TrainingController.java:30)
-	at com.example.training.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
+	at com.example.exercises.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
+	at com.example.exercises.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
+	at com.example.exercises.adapters.rest.TrainingController.addSet(TrainingController.java:30)
+	at com.example.exercises.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -228,7 +228,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at com.example.training.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
+	at com.example.exercises.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -584,10 +584,10 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy107.save(Unknown Source)
-	at com.example.training.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
-	at com.example.training.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
-	at com.example.training.adapters.rest.TrainingController.addSet(TrainingController.java:30)
-	at com.example.training.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
+	at com.example.exercises.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
+	at com.example.exercises.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
+	at com.example.exercises.adapters.rest.TrainingController.addSet(TrainingController.java:30)
+	at com.example.exercises.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -596,7 +596,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at com.example.training.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
+	at com.example.exercises.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -676,10 +676,10 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy107.save(Unknown Source)
-	at com.example.training.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
-	at com.example.training.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
-	at com.example.training.adapters.rest.TrainingController.addSet(TrainingController.java:30)
-	at com.example.training.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
+	at com.example.exercises.adapters.persistence.ExerciseSetRepositoryAdapter.saveExerciseSet(ExerciseSetRepositoryAdapter.java:20)
+	at com.example.exercises.domain.service.TrainingProcessor.addSet(TrainingProcessor.java:15)
+	at com.example.exercises.adapters.rest.TrainingController.addSet(TrainingController.java:30)
+	at com.example.exercises.adapters.rest.TrainingController$$FastClassBySpringCGLIB$$4c45d389.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
@@ -688,7 +688,7 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at com.example.training.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
+	at com.example.exercises.adapters.rest.TrainingController$$EnhancerBySpringCGLIB$$d3dec16c.addSet(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1063,5 +1063,14 @@ create table set (id bigint not null, local_date_time timestamp, reps integer, w
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table [*]set add constraint FKs6fu5nmoiaqvyg71ogawxxx5l foreign key (exercise_id) references exercises"; expected "identifier"; SQL statement:
 alter table set add constraint FKs6fu5nmoiaqvyg71ogawxxx5l foreign key (exercise_id) references exercises [42001-214]
 2022-07-15 12:42:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table [*]set add constraint FKmis49ndrao10eukbflct09684 foreign key (user_entity_id) references users"; expected "identifier"; SQL statement:
+alter table set add constraint FKmis49ndrao10eukbflct09684 foreign key (user_entity_id) references users [42001-214]
+2022-07-15 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]set (id bigint not null, local_date_time timestamp, reps integer, weight integer, exercise_id bigint, user_entity_id bigint, primary key (id))"; expected "identifier"; SQL statement:
+create table set (id bigint not null, local_date_time timestamp, reps integer, weight integer, exercise_id bigint, user_entity_id bigint, primary key (id)) [42001-214]
+2022-07-15 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table [*]set add constraint FKs6fu5nmoiaqvyg71ogawxxx5l foreign key (exercise_id) references exercises"; expected "identifier"; SQL statement:
+alter table set add constraint FKs6fu5nmoiaqvyg71ogawxxx5l foreign key (exercise_id) references exercises [42001-214]
+2022-07-15 18:25:10 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table [*]set add constraint FKmis49ndrao10eukbflct09684 foreign key (user_entity_id) references users"; expected "identifier"; SQL statement:
 alter table set add constraint FKmis49ndrao10eukbflct09684 foreign key (user_entity_id) references users [42001-214]

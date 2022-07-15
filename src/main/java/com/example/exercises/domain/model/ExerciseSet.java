@@ -1,4 +1,4 @@
-package com.example.training.domain.model;
+package com.example.exercises.domain.model;
 
 import lombok.Builder;
 import lombok.Getter;

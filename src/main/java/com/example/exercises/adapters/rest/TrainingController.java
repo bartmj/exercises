@@ -1,8 +1,8 @@
-package com.example.training.adapters.rest;
+package com.example.exercises.adapters.rest;
 
-import com.example.training.adapters.rest.dto.ExerciseSetDto;
-import com.example.training.adapters.rest.mapper.TrainingRestMapper;
-import com.example.training.domain.port.TrainingService;
+import com.example.exercises.adapters.rest.dto.ExerciseSetDto;
+import com.example.exercises.adapters.rest.mapper.TrainingRestMapper;
+import com.example.exercises.domain.port.TrainingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
