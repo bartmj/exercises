@@ -19,3 +19,15 @@ GET http://localhost:8080/exercises
 
 ###
 GET http://localhost:8080/exercises/5
+
+###
+POST http://localhost:8080/training
+Accept: application/json
+Content-Type: application/json
+
+{
+  "exerciseId": "1",
+  "userId": "1",
+  "reps": "12",
+  "weight": "40"
+}

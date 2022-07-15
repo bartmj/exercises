@@ -1,6 +1,5 @@
 package com.example.exercises.domain.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

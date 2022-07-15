@@ -1,10 +1,19 @@
 package com.example.training.domain.model;
 
-import com.example.exercises.domain.model.Exercise;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDateTime;
+
+@Setter
+@Getter
+@Builder
 public class ExerciseSet {
 
-    private Exercise exercise;
+    private long exerciseId;
+    private long userId;
+    private LocalDateTime date;
     private int reps;
     private int weight;
 }

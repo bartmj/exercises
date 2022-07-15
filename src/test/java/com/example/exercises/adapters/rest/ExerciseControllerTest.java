@@ -1,7 +1,7 @@
 package com.example.exercises.adapters.rest;
 
-import com.example.exercises.adapters.rest.dtos.ExerciseDto;
-import com.example.exercises.adapters.rest.mappers.ExerciseRestMapper;
+import com.example.exercises.adapters.rest.dto.ExerciseDto;
+import com.example.exercises.adapters.rest.mapper.ExerciseRestMapper;
 import com.example.exercises.domain.service.ExerciseProcessor;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -1,12 +1,10 @@
 package com.example.exercises.integration;
 
-import com.example.exercises.adapters.rest.dtos.ExerciseDto;
-import com.example.exercises.domain.model.Exercise;
-import com.example.exercises.domain.ports.ExerciseRepository;
+import com.example.exercises.adapters.rest.dto.ExerciseDto;
+import com.example.exercises.domain.port.ExerciseRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

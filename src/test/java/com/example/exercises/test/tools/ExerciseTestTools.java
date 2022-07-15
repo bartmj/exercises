@@ -1,7 +1,7 @@
 package com.example.exercises.test.tools;
 
-import com.example.exercises.adapters.persistence.entities.ExerciseEntity;
-import com.example.exercises.adapters.rest.dtos.ExerciseDto;
+import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
+import com.example.exercises.adapters.rest.dto.ExerciseDto;
 import com.example.exercises.domain.model.Exercise;
 
 import java.util.ArrayList;

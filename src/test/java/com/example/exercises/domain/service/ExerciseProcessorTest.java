@@ -1,6 +1,6 @@
 package com.example.exercises.domain.service;
 
-import com.example.exercises.domain.ports.ExerciseRepository;
+import com.example.exercises.domain.port.ExerciseRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
