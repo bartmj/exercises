@@ -16,4 +16,11 @@ public class GlobalControllerExceptionHandler {
                 .body(exception.getMessage());
     }
 
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> onRuntimeException(RuntimeException exception){
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(exception.getMessage());
+    }
+
 }

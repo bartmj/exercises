@@ -1,11 +1,11 @@
 package com.example.exercises.adapters.persistence.entity;
 
-import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
-import com.example.exercises.domain.model.UserEntity;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Getter
@@ -20,9 +20,9 @@ public class ExerciseSetEntity {
     @GeneratedValue
     private Long id;
     @ManyToOne
-    private ExerciseEntity exercise;
-    @ManyToOne
     private UserEntity userEntity;
+    @ManyToOne
+    private ExerciseEntity exerciseEntity;
     private LocalDateTime localDateTime = LocalDateTime.now();
     private Integer reps;
     private Integer weight;

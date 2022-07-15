@@ -1,5 +1,6 @@
 package com.example.exercises.domain.port;
 
+import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
 import com.example.exercises.domain.model.Exercise;
 import java.util.List;
 
@@ -9,5 +10,6 @@ public interface ExerciseService {
 
     List<Exercise> getAll();
 
-    Exercise getById(Long id);
+    Exercise findById(Long id);
+
 }

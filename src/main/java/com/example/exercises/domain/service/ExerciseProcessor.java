@@ -1,5 +1,6 @@
 package com.example.exercises.domain.service;
 
+import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
 import com.example.exercises.domain.exception.ExerciseNotFoundException;
 import com.example.exercises.domain.model.Exercise;
 import com.example.exercises.domain.port.ExerciseRepository;
@@ -24,8 +25,9 @@ public class ExerciseProcessor implements ExerciseService {
     }
 
     @Override
-    public Exercise getById(Long id) {
+    public Exercise findById(Long id) {
         return exerciseRepository.findById(id)
                 .orElseThrow(ExerciseNotFoundException::new);
     }
+
 }

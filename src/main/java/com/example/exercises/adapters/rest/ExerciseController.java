@@ -41,7 +41,7 @@ public class ExerciseController {
 
     @GetMapping(value = "/{id}", produces = {"application/json; charset=UTF-8"})
     public ResponseEntity<ExerciseDto> findById(@PathVariable Long id) {
-        var exercise = service.getById(id);
+        var exercise = service.findById(id);
         var exerciseDto = exerciseRestMapper.toDto(exercise);
         return ResponseEntity
                 .status(HttpStatus.OK)
