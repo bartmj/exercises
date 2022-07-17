@@ -4,8 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
 @Getter
@@ -13,17 +11,17 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
-@Table(name = "set")
+@Table(name = "exerciseset")
 public class ExerciseSetEntity {
 
     @Id
     @GeneratedValue
     private Long id;
     @ManyToOne
-    private UserEntity userEntity;
+    private UsersEntity usersEntity;
     @ManyToOne
     private ExerciseEntity exerciseEntity;
-    private LocalDateTime localDateTime = LocalDateTime.now();
+    private LocalDateTime localDateTime;
     private Integer reps;
     private Integer weight;
 

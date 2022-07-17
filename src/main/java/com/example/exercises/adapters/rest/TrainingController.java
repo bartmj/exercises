@@ -23,7 +23,6 @@ public class TrainingController {
     private final TrainingService service;
     private final TrainingRestMapper mapper;
 
-
     @PostMapping
     public ResponseEntity<String> addSet(@Valid @RequestBody ExerciseSetDto exerciseSetDto) {
         var exerciseSet = mapper.toDomain(exerciseSetDto);
@@ -32,5 +31,4 @@ public class TrainingController {
                 .status(HttpStatus.OK)
                 .body(String.format("Set with id %s added.", setId));
     }
-
 }

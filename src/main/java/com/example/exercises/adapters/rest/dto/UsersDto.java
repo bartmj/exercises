@@ -7,7 +7,7 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
-public class UserDto {
+public class UsersDto {
     private Long id;
     private String email;
 }

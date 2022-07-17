@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Builder
-public class User {
+public class Users {
     private Long id;
     private String email;
 }

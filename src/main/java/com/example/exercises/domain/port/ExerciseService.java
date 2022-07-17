@@ -13,3 +13,4 @@ public interface ExerciseService {
     Exercise findById(Long id);
 
 }
+

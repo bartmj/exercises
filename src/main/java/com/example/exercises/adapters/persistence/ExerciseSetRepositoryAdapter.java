@@ -20,4 +20,10 @@ public class ExerciseSetRepositoryAdapter implements ExerciseSetRepository {
         var savedEntity = repository.save(exerciseSetEntity);
         return savedEntity.getId();
     }
+
+    @Override
+    public ExerciseSet findOne(Long id) {
+        var referenceById = repository.getReferenceById(id);
+        return mapper.toDomain(referenceById);
+    }
 }

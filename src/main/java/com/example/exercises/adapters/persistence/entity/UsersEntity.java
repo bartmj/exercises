@@ -16,7 +16,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @Table(name = "users")
-public class UserEntity {
+public class UsersEntity {
 
     @Id
     @GeneratedValue
