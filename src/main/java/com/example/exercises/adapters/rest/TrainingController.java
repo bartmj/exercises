@@ -26,9 +26,9 @@ public class TrainingController {
     @PostMapping
     public ResponseEntity<String> addSet(@Valid @RequestBody ExerciseSetDto exerciseSetDto) {
         var exerciseSet = mapper.toDomain(exerciseSetDto);
-        var setId = service.addSet(exerciseSet);
+        service.addSet(exerciseSet);
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(String.format("Set with id %s added.", setId));
+                .body("Set has been added.");
     }
 }

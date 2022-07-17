@@ -21,7 +21,7 @@ public class ExerciseSetEntity {
     private UsersEntity usersEntity;
     @ManyToOne
     private ExerciseEntity exerciseEntity;
-    private LocalDateTime localDateTime;
+    private LocalDateTime localDateTime = LocalDateTime.now();
     private Integer reps;
     private Integer weight;
 
