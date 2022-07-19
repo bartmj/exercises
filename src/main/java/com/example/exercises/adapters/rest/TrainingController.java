@@ -3,9 +3,7 @@ package com.example.exercises.adapters.rest;
 import com.example.exercises.adapters.rest.dto.ExerciseSetDto;
 import com.example.exercises.adapters.rest.mapper.TrainingRestMapper;
 import com.example.exercises.domain.port.TrainingService;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.RequiredArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -14,9 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +39,6 @@ public class TrainingController {
     @GetMapping(value = "/{userId}/{localDateTime}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ExerciseSetDto>> getAllSets(@PathVariable("userId") Long userId,
                                                            @PathVariable("localDateTime") String date) {
-
         LocalDate localDate;
         try {
             localDate = LocalDate.parse(date);
@@ -53,12 +47,6 @@ public class TrainingController {
                     .status(HttpStatus.BAD_REQUEST)
                     .body(new ArrayList<>());
         }
-//            return ResponseEntity
-//                    .status(HttpStatus.BAD_REQUEST)
-//                    .body(new ArrayList<>());
-
-//        LocalDate aDay = LocalDate.of(2022, 8, 23);
-//        var dateTimeFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).format(aDay);
 
         var exerciseSets = service.findAllByIdAndDate(userId, localDate);
         var exerciseSetDtos = exerciseSets

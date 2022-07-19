@@ -44,12 +44,6 @@ class TrainingControllerTest {
     @Test
     void givenInputIsValid_getShouldReturns_Status200() throws Exception {
 
-        List<ExerciseSet> exerciseList = new ArrayList<>();
-        List<ExerciseSetDto> exerciseSetList = new ArrayList<>();
-
-        Mockito.when(service.findAllByIdAndDate(1L, LocalDate.parse("2022-07-19"))).thenReturn(exerciseList);
-        Mockito.when(trainingRestMapper.toDto(exerciseList)).thenReturn(exerciseSetList);
-
         mockMvc.perform(MockMvcRequestBuilders.get("/training/1/2022-07-19"))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().is(200));

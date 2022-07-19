@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.spi.LocaleServiceProvider;
 
 @RequiredArgsConstructor
 public class TrainingProcessor implements TrainingService {
@@ -20,6 +21,7 @@ public class TrainingProcessor implements TrainingService {
 
     @Override
     public List<ExerciseSet> findAllByIdAndDate(Long userId, LocalDate localDate) {
+
         return repository.findAllByIdAndDate(userId, localDate);
     }
 
