@@ -7,6 +7,11 @@ import com.example.exercises.domain.port.ExerciseSetRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @Service
 public class ExerciseSetRepositoryAdapter implements ExerciseSetRepository {
@@ -26,4 +31,13 @@ public class ExerciseSetRepositoryAdapter implements ExerciseSetRepository {
         var referenceById = repository.getReferenceById(id);
         return mapper.toDomain(referenceById);
     }
+
+    @Override
+    public List<ExerciseSet> findAllByIdAndDate(Long userId, LocalDate localDate) {
+        var all = repository.findAllById(userId);
+        return all.stream()
+                .map(mapper::toDomain)
+                .collect(Collectors.toList());
+    }
+
 }

@@ -5,6 +5,9 @@ import com.example.exercises.domain.port.ExerciseSetRepository;
 import com.example.exercises.domain.port.TrainingService;
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @RequiredArgsConstructor
 public class TrainingProcessor implements TrainingService {
 
@@ -14,4 +17,10 @@ public class TrainingProcessor implements TrainingService {
     public Long addSet(ExerciseSet exerciseSet) {
         return repository.saveExerciseSet(exerciseSet);
     }
+
+    @Override
+    public List<ExerciseSet> findAllByIdAndDate(Long userId, LocalDate localDate) {
+        return repository.findAllByIdAndDate(userId, localDate);
+    }
+
 }

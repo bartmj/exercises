@@ -31,3 +31,13 @@ Content-Type: application/json
   "reps": "12",
   "weight": "40"
 }
+
+###
+GET http://localhost:8080/training/5/fsdfsawe
+//mockMvc.perform(MockMvcRequestBuilders.get("/training")
+//
+//.param("userId", "1L")
+//.param("date", "2016-01-25T21:34:55"))
+//.andDo(print())
+//.andExpect(MockMvcResultMatchers.status().is(200));
+//}
