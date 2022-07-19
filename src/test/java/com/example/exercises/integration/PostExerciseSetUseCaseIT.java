@@ -1,8 +1,11 @@
 package com.example.exercises.integration;
 
+import com.example.exercises.adapters.persistence.repository.JpaExerciseRepository;
+import com.example.exercises.adapters.persistence.repository.JpaUsersRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -14,13 +17,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PostExerciseUseCaseIT {
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class PostExerciseSetUseCaseIT {
 
     @Autowired
     private MockMvc mockMvc;
@@ -30,14 +33,15 @@ public class PostExerciseUseCaseIT {
 
     @Transactional
     @Test
-    void postExercise_returns_statusCode201() throws Exception {
-        var validExerciseDto = ExerciseTestTools.createValidExerciseDto();
+    void given_UserWithId1_and_ExerciseWithId1_exist_postExerciseSet_returns_statusCode201() throws Exception {
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/exercises/add")
+        var validExerciseSetDto = ExerciseTestTools.createValidExerciseSetDto();
+        // WHEN
+        mockMvc.perform(MockMvcRequestBuilders.post("/training")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(validExerciseDto)))
+                .content(objectMapper.writeValueAsString(validExerciseSetDto)))
                 .andDo(print())
+                // THEN
                 .andExpect(MockMvcResultMatchers.status().is(201));
     }
-
 }

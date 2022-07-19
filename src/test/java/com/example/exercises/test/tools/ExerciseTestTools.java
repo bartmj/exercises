@@ -2,6 +2,7 @@ package com.example.exercises.test.tools;
 
 import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
 import com.example.exercises.adapters.rest.dto.ExerciseDto;
+import com.example.exercises.adapters.rest.dto.ExerciseSetDto;
 import com.example.exercises.domain.model.Exercise;
 
 import java.util.ArrayList;
@@ -57,6 +58,16 @@ public class ExerciseTestTools {
                 .engName("Squat with a barbell")
                 .mainMuscleGroup(new HashSet<>(Arrays.asList("czworogłowy uda")))
                 .supportMuscleGroup(new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))
+                .build();
+    }
+
+    public static ExerciseSetDto createValidExerciseSetDto() {
+        return ExerciseSetDto
+                .builder()
+                .exerciseId(1l)
+                .userId(1L)
+                .reps(12)
+                .weight(40)
                 .build();
     }
 }

@@ -28,7 +28,7 @@ public class TrainingController {
         var exerciseSet = mapper.toDomain(exerciseSetDto);
         service.addSet(exerciseSet);
         return ResponseEntity
-                .status(HttpStatus.OK)
+                .status(HttpStatus.CREATED)
                 .body("Set has been added.");
     }
 }
