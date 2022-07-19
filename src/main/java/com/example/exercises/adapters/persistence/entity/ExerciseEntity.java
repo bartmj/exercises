@@ -18,7 +18,7 @@ public class ExerciseEntity {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    private String exerciseName;
     private String engName;
     @ElementCollection
     private Set<String> mainMuscleGroup = new HashSet<>();

@@ -11,13 +11,13 @@ import java.util.Set;
 @Builder
 public class Exercise {
 
-    String name;
+    String exerciseName;
     String engName;
     Set<String> mainMuscleGroup;
     Set<String> supportMuscleGroup;
 
-    public Exercise(String name, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
-        this.name = name;
+    public Exercise(String exerciseName, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
+        this.exerciseName = exerciseName;
         this.engName = engName;
         this.mainMuscleGroup = mainMuscleGroup;
         this.supportMuscleGroup = supportMuscleGroup;

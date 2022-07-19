@@ -4,6 +4,7 @@ import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
 import com.example.exercises.domain.model.Exercise;
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.List;
 

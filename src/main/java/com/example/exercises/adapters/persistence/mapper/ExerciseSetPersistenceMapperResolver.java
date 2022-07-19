@@ -3,18 +3,19 @@ package com.example.exercises.adapters.persistence.mapper;
 import com.example.exercises.adapters.persistence.entity.ExerciseEntity;
 import com.example.exercises.adapters.persistence.entity.UsersEntity;
 import com.example.exercises.adapters.persistence.repository.JpaExerciseRepository;
-import com.example.exercises.adapters.persistence.repository.JpaUserRepository;
+import com.example.exercises.adapters.persistence.repository.JpaUsersRepository;
 import com.example.exercises.domain.exception.ExerciseNotFoundException;
+
 import com.example.exercises.domain.exception.UserNotFoundException;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ExerciseSetPersistenceMapperResolver {
 
     private final JpaExerciseRepository jpaExerciseRepository;
-    private final JpaUserRepository jpaUserRepository;
+    private final JpaUsersRepository jpaUserRepository;
 
     public ExerciseEntity findExercise(Long id) {
         return jpaExerciseRepository.findById(id).orElseThrow(ExerciseNotFoundException::new);

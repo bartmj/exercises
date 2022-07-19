@@ -2,7 +2,10 @@ package com.example.exercises.adapters.rest;
 
 import com.example.exercises.adapters.rest.dto.ExerciseDto;
 import com.example.exercises.adapters.rest.mapper.ExerciseRestMapper;
+import com.example.exercises.adapters.rest.mapper.TrainingRestMapper;
+import com.example.exercises.domain.port.TrainingService;
 import com.example.exercises.domain.service.ExerciseProcessor;
+import com.example.exercises.domain.service.TrainingProcessor;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -40,14 +43,21 @@ class ExerciseControllerTest {
     private ExerciseProcessor exerciseService;
     @MockBean
     private ExerciseRestMapper mapper;
+    @MockBean
+    private TrainingService trainingService;
+    @MockBean
+    private TrainingRestMapper trainingRestMapper;
 
     @Test
     void givenInputIsInvalid_postShouldReturns_Status400() throws Exception {
-        ExerciseDto exerciseDto = ExerciseDto.builder().build();
+        ExerciseDto exerciseDto = ExerciseDto
+                .builder()
+                .exerciseName("")
+                .build();
         String body = objectMapper.writeValueAsString(exerciseDto);
 
         mockMvc.perform(MockMvcRequestBuilders.post(EXERCISES_ADD)
-                .contentType(MediaType.APPLICATION_JSON))
+                .contentType(MediaType.APPLICATION_JSON).content(body))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().is(400));
     }
@@ -93,7 +103,7 @@ class ExerciseControllerTest {
         });
 
         assertAll(
-                () -> assertEquals(content.get(0).getName(), "Przysiad ze sztangą"),
+                () -> assertEquals(content.get(0).getExerciseName(), "Przysiad ze sztangą"),
                 () -> assertEquals(content.get(0).getEngName(), "Squat with a barbell"),
                 () -> assertEquals(content.get(0).getMainMuscleGroup(), new HashSet<>(Arrays.asList("czworogłowy uda"))),
                 () -> assertEquals(content.get(0).getSupportMuscleGroup(), new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))

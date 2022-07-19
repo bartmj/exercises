@@ -2,6 +2,7 @@ package com.example.exercises.integration;
 
 import com.example.exercises.adapters.rest.dto.ExerciseDto;
 import com.example.exercises.domain.port.ExerciseRepository;
+import com.example.exercises.domain.port.UsersRepository;
 import com.example.exercises.test.tools.ExerciseTestTools;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -38,6 +40,7 @@ public class GetAllExercisesUseCaseIT {
     @Autowired
     private ExerciseRepository exerciseRepository;
 
+
     @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
     @Transactional
     @Test
@@ -58,7 +61,7 @@ public class GetAllExercisesUseCaseIT {
         });
 
         assertAll(
-                () -> assertEquals(content.get(size - 1).getName(), validExercise.getName()),
+                () -> assertEquals(content.get(size - 1).getExerciseName(), validExercise.getExerciseName()),
                 () -> assertEquals(content.get(size - 1).getEngName(), validExercise.getEngName()),
                 () -> assertEquals(content.get(size - 1).getMainMuscleGroup(), validExercise.getMainMuscleGroup()),
                 () -> assertEquals(content.get(size - 1).getSupportMuscleGroup(), validExercise.getSupportMuscleGroup())

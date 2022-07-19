@@ -30,7 +30,7 @@ class JpaExerciseRepositoryTest {
         var validExerciseEntity = ExerciseTestTools.createValidExerciseEntity();
         var savedExerciseEntity = repository.save(validExerciseEntity);
         assertAll(
-                () -> assertEquals(savedExerciseEntity.getName(), validExerciseEntity.getName()),
+                () -> assertEquals(savedExerciseEntity.getExerciseName(), validExerciseEntity.getExerciseName()),
                 () -> assertEquals(savedExerciseEntity.getEngName(), validExerciseEntity.getEngName()),
                 () -> assertEquals(savedExerciseEntity.getMainMuscleGroup(), validExerciseEntity.getMainMuscleGroup()),
                 () -> assertEquals(savedExerciseEntity.getSupportMuscleGroup(), validExerciseEntity.getSupportMuscleGroup())

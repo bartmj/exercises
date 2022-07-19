@@ -1,7 +1,9 @@
 package com.example.exercises.config;
 
 import com.example.exercises.domain.port.ExerciseRepository;
+import com.example.exercises.domain.port.ExerciseService;
 import com.example.exercises.domain.port.ExerciseSetRepository;
+import com.example.exercises.domain.port.TrainingService;
 import com.example.exercises.domain.service.ExerciseProcessor;
 import com.example.exercises.domain.service.TrainingProcessor;
 import org.springframework.context.annotation.Bean;
@@ -15,9 +17,9 @@ public class AppConfiguration {
         return new ExerciseProcessor(exerciseRepository);
     }
 
-    @Bean(name = "trainingProcessor")
-    public TrainingProcessor getTrainingProcessor(ExerciseSetRepository exerciseRepository){
-        return new TrainingProcessor(exerciseRepository);
+    @Bean(name = "trainingService")
+    public TrainingService getTrainingProcessor(ExerciseSetRepository exerciseSetRepository){
+        return new TrainingProcessor(exerciseSetRepository);
     }
 
 }

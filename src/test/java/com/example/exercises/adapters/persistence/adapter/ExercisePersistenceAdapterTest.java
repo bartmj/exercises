@@ -53,7 +53,7 @@ class ExercisePersistenceAdapterTest {
         var exerciseList = persistenceAdapter.getAll();
 
         assertAll(
-                () -> assertEquals(exerciseList.get(0).getName(), "Przysiad ze sztangą"),
+                () -> assertEquals(exerciseList.get(0).getExerciseName(), "Przysiad ze sztangą"),
                 () -> assertEquals(exerciseList.get(0).getEngName(), "Squat with a barbell"),
                 () -> assertEquals(exerciseList.get(0).getMainMuscleGroup(), new HashSet<>(Arrays.asList("czworogłowy uda"))),
                 () -> assertEquals(exerciseList.get(0).getSupportMuscleGroup(), new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))

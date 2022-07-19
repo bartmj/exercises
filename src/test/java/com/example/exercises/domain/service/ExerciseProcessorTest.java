@@ -42,7 +42,7 @@ class ExerciseProcessorTest {
         var exercises = exerciseService.getAll();
 
         assertAll(
-                () -> assertEquals(exercises.get(0).getName(), "Przysiad ze sztangą"),
+                () -> assertEquals(exercises.get(0).getExerciseName(), "Przysiad ze sztangą"),
                 () -> assertEquals(exercises.get(0).getEngName(), "Squat with a barbell"),
                 () -> assertEquals(exercises.get(0).getMainMuscleGroup(), new HashSet<>(Arrays.asList("czworogłowy uda"))),
                 () -> assertEquals(exercises.get(0).getSupportMuscleGroup(), new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))

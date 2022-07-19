@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequiredArgsConstructor
 @Validated
+@RequiredArgsConstructor
 @RequestMapping("/training")
 public class TrainingController {
 

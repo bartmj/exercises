@@ -14,7 +14,7 @@ import java.util.Set;
 public class ExerciseDto {
 
         @NotBlank
-        String name;
+        String exerciseName;
         @NotBlank
         String engName;
         @NotEmpty
@@ -23,7 +23,7 @@ public class ExerciseDto {
         Set<String> supportMuscleGroup;
 
         public ExerciseDto(String name, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
-                this.name = name;
+                this.exerciseName = name;
                 this.engName = engName;
                 this.mainMuscleGroup = mainMuscleGroup;
                 this.supportMuscleGroup = supportMuscleGroup;

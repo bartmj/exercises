@@ -43,7 +43,7 @@ public class ExerciseTestTools {
 
     public static Exercise createValidExercise() {
         return Exercise.builder()
-                .name("Przysiad ze sztangą")
+                .exerciseName("Przysiad ze sztangą")
                 .engName("Squat with a barbell")
                 .mainMuscleGroup(new HashSet<>(Arrays.asList("czworogłowy uda")))
                 .supportMuscleGroup(new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))
@@ -53,7 +53,7 @@ public class ExerciseTestTools {
     public static ExerciseDto createValidExerciseDto() {
         return ExerciseDto
                 .builder()
-                .name("Przysiad ze sztangą")
+                .exerciseName("Przysiad ze sztangą")
                 .engName("Squat with a barbell")
                 .mainMuscleGroup(new HashSet<>(Arrays.asList("czworogłowy uda")))
                 .supportMuscleGroup(new HashSet<>(Arrays.asList("dwugłowy uda", "pośladkowy")))
