@@ -13,6 +13,7 @@ import java.util.Set;
 @Setter
 public class ExerciseDto {
 
+        Long id;
         @NotBlank
         String exerciseName;
         @NotBlank
@@ -22,11 +23,11 @@ public class ExerciseDto {
         @NotEmpty
         Set<String> supportMuscleGroup;
 
-        public ExerciseDto(String name, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
-                this.exerciseName = name;
+        public ExerciseDto(Long id, String exerciseName, String engName, Set<String> mainMuscleGroup, Set<String> supportMuscleGroup) {
+                this.id = id;
+                this.exerciseName = exerciseName;
                 this.engName = engName;
                 this.mainMuscleGroup = mainMuscleGroup;
                 this.supportMuscleGroup = supportMuscleGroup;
         }
-
 }

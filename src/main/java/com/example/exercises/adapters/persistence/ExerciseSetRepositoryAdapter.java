@@ -40,5 +40,4 @@ public class ExerciseSetRepositoryAdapter implements ExerciseSetRepository {
                 .map(mapper::toDomain)
                 .collect(Collectors.toList());
     }
-
 }

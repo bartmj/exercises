@@ -9,12 +9,12 @@ import lombok.*;
 @Setter
 public class ExerciseSetDto {
 
-    long exerciseId;
-    long userId;
+    Long exerciseId;
+    Long userId;
     int reps;
     int weight;
 
-    public ExerciseSetDto(long exerciseId, long userId, int reps, int weight) {
+    public ExerciseSetDto(Long exerciseId, Long userId, int reps, int weight) {
         this.exerciseId = exerciseId;
         this.userId = userId;
         this.reps = reps;

@@ -3,7 +3,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "abc",
+  "name": "Martwy ciąg",
   "engName": "abc",
   "mainMuscleGroup": [
     "abc"
@@ -18,7 +18,7 @@ Content-Type: application/json
 GET http://localhost:8080/exercises
 
 ###
-GET http://localhost:8080/exercises/5
+GET http://localhost:8080/exercises/56
 
 ###
 POST http://localhost:8080/training
@@ -33,4 +33,4 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/training/1/2022-07-19
+GET http://localhost:8080/training/1/2022-07-20
