@@ -27,10 +27,10 @@ Content-Type: application/json
 
 {
   "exerciseId": "1",
-  "userId": "1",
+  "userId": "6",
   "reps": "12",
   "weight": "40"
 }
 
 ###
-GET http://localhost:8080/training/1/2022-07-20
+GET http://localhost:8080/training/6/2022-07-20

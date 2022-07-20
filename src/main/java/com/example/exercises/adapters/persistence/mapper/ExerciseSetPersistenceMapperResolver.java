@@ -7,6 +7,7 @@ import com.example.exercises.adapters.persistence.repository.JpaUsersRepository;
 import com.example.exercises.domain.exception.ExerciseNotFoundException;
 
 import com.example.exercises.domain.exception.UserNotFoundException;
+import com.example.exercises.domain.model.Exercise;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -23,5 +24,13 @@ public class ExerciseSetPersistenceMapperResolver {
 
     public UsersEntity findUser(Long id) {
         return jpaUserRepository.findById(id).orElseThrow(UserNotFoundException::new);
+    }
+
+    public Long getUserId(UsersEntity usersEntity) {
+        return usersEntity.getId();
+    }
+
+    public Long getExerciseId(ExerciseEntity exerciseEntity) {
+        return exerciseEntity.getId();
     }
 }

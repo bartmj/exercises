@@ -10,10 +10,10 @@ public interface ExerciseSetPersistenceMapper {
 
     @Mapping(source = "exerciseId", target = "exerciseEntity")
     @Mapping(source = "userId", target = "usersEntity")
-//    @Mapping(target = "exercise_id", ignore = true)
-//    @Mapping(target = "user_id", ignore = true)
     ExerciseSetEntity toEntity(ExerciseSet exercise);
 
+    @Mapping(source = "exerciseEntity", target = "exerciseId")
+    @Mapping(source = "usersEntity", target = "userId")
     ExerciseSet toDomain(ExerciseSetEntity exerciseEntity);
 
 }
