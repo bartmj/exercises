@@ -21,7 +21,7 @@ public class ExerciseController {
     private final ExerciseProcessor service;
     private final ExerciseRestMapper exerciseRestMapper;
 
-    @PostMapping("/add")
+    @PostMapping(value = "/add", consumes = "application/json")
     public ResponseEntity<Long> sendExercise(@Valid @RequestBody ExerciseDto exerciseDto) {
         var exercise = exerciseRestMapper.toDomain(exerciseDto);
         var aLong = service.saveExercise(exercise);
