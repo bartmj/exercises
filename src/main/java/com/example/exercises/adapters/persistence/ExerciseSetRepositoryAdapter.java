@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +33,9 @@ public class ExerciseSetRepositoryAdapter implements ExerciseSetRepository {
 
     @Override
     public List<ExerciseSet> findAllByIdAndDate(Long userId, LocalDate localDate) {
-        var all = repository.findAllById(userId);
+        var from = localDate.atStartOfDay();
+        var to = localDate.atStartOfDay().plusDays(1);
+        var all = repository.findAllByIdAndDate(userId, from, to);
         return all.stream()
                 .map(mapper::toDomain)
                 .collect(Collectors.toList());

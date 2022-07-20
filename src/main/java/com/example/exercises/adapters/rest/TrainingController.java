@@ -36,9 +36,9 @@ public class TrainingController {
                 .body("Set has been added.");
     }
 
-    @GetMapping(value = "/{userId}/{localDateTime}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{userId}/{localDate}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ExerciseSetDto>> getAllSets(@PathVariable("userId") Long userId,
-                                                           @PathVariable("localDateTime") String date) {
+                                                           @PathVariable("localDate") String date) {
         LocalDate localDate;
         try {
             localDate = LocalDate.parse(date);

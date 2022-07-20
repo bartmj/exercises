@@ -33,11 +33,4 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/training/5/fsdfsawe
-//mockMvc.perform(MockMvcRequestBuilders.get("/training")
-//
-//.param("userId", "1L")
-//.param("date", "2016-01-25T21:34:55"))
-//.andDo(print())
-//.andExpect(MockMvcResultMatchers.status().is(200));
-//}
+GET http://localhost:8080/training/1/2022-07-19

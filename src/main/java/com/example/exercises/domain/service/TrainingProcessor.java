@@ -21,7 +21,6 @@ public class TrainingProcessor implements TrainingService {
 
     @Override
     public List<ExerciseSet> findAllByIdAndDate(Long userId, LocalDate localDate) {
-
         return repository.findAllByIdAndDate(userId, localDate);
     }
 
