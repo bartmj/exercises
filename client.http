@@ -54,5 +54,7 @@ Content-Type: application/json
   "weight": "80"
 }
 
+
+
 ###
 GET http://localhost:8080/training/1/2022-07-25
