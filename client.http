@@ -18,6 +18,23 @@ Content-Type: application/json
   ]
 }
 
+###
+POST http://localhost:8080/exercises/add
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": null,
+  "exerciseName": "Przysiad ze sztangą",
+  "engName": "Back squat",
+  "mainMuscleGroup": [
+    "czworogłowy uda"
+  ],
+  "supportMuscleGroup": [
+    "dwugłowy uda",
+    "pośladkowy"
+  ]
+}
 
 ###
 GET http://localhost:8080/exercises
@@ -31,11 +48,11 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "exerciseId": "1",
+  "exerciseName": "Kuc",
   "userId": "1",
-  "reps": "12",
-  "weight": "60"
+  "reps": "4",
+  "weight": "80"
 }
 
 ###
-GET http://localhost:8080/training/1/2022-07-20
+GET http://localhost:8080/training/1/2022-07-25

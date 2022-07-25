@@ -64,7 +64,7 @@ public class ExerciseTestTools {
     public static ExerciseSetDto createValidExerciseSetDto() {
         return ExerciseSetDto
                 .builder()
-                .exerciseId(1l)
+                .exerciseName("Przysiad natoliński")
                 .userId(1L)
                 .reps(12)
                 .weight(40)

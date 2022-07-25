@@ -30,6 +30,7 @@ public class ExerciseController {
                 .body(aLong);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(produces = {"application/json; charset=UTF-8"})
     public ResponseEntity<List<ExerciseDto>> getAllExercises() {
         var exercises = service.getAll();
