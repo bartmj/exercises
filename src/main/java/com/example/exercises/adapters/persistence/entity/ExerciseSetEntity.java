@@ -23,6 +23,6 @@ public class ExerciseSetEntity {
     private LocalDateTime localDateTime = LocalDateTime.now();
     private Integer reps;
     private Integer weight;
-
+    private String comment;
 }
 

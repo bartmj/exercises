@@ -7,17 +7,14 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
+@AllArgsConstructor
 public class ExerciseSetDto {
 
+    Long id;
     String exerciseName;
     Long userId;
     int reps;
     int weight;
+    String comment;
 
-    public ExerciseSetDto(String exerciseName, Long userId, int reps, int weight) {
-        this.exerciseName = exerciseName;
-        this.userId = userId;
-        this.reps = reps;
-        this.weight = weight;
-    }
 }

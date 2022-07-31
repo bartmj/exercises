@@ -11,9 +11,12 @@ import java.time.LocalDateTime;
 @Builder
 public class ExerciseSet {
 
+    private Long id;
     private String exerciseName;
     private Long userId;
     private LocalDateTime date;
     private Integer reps;
     private Integer weight;
+    private String comment;
+
 }

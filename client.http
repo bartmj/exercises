@@ -48,6 +48,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
+  "id": null,
   "exerciseName": "Kuc",
   "userId": "1",
   "reps": "4",
